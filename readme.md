@@ -27,4 +27,7 @@ A package is a collection of Python modules: while a module is a single Python f
 A way of making GUI's in python (sidenote there are better libraries)
 
 ### Reflection
-TODO:: need to explain this further
+TODO:: find a good way of explaining this
+
+### Encapsulation
+TODO:: find a good way of explaining this
