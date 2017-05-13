@@ -24,8 +24,3 @@ A way of making GUI's in python (sidenote there are better libraries)
 
 ### Reflection
 TODO:: need to explain this further
-
-
-
-
-
