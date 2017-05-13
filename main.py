@@ -6,8 +6,7 @@ from class_teacher import Teacher
 from class_course import Course
 from tkinter import *
 from tkinter import ttk
-
-
+from tkinter import messagebox
 
 class Demo1( Frame ):
     school = object
@@ -22,7 +21,8 @@ class Demo1( Frame ):
     def new_window(self):
         self.newWindow = Demo1()
 
-
+    def error(self,message):
+        messagebox.showerror("Error", message)
 
     def createAddressFeilds(self,row):
         self.address_line1_label = Label(self, text="Address Line 1").grid(row=row)
@@ -78,7 +78,7 @@ class Demo1( Frame ):
         self.school = School(self.school_id_input.get(), self.school_name_input.get(),self.founded_input.get(),self.motto_input.get(),address.display())
         errors = self.school.checkErrors()
         if len(errors) > 0:
-            print(errors)
+            self.error(errors)
         else:
 
             self.pack_forget()
@@ -89,7 +89,7 @@ class Demo1( Frame ):
         self.course = Course(self.course_id_input.get(),self.course_name_input.get(),self.course_length_input.get(),self.fail_grade_input.get(),self.pass_grade_input.get())
         errors = self.course.checkErrors()
         if len(errors) > 0:
-            print(errors)
+            self.error(errors)
         else:
             self.pack_forget()
             self.grid_forget()
@@ -128,7 +128,7 @@ class Demo1( Frame ):
         self.student = Student(self.student_id_input.get(),self.student_name_input.get(),self.student_age_input.get(),address.display())
         errors = self.student.checkErrors()
         if len(errors) > 0:
-            print(errors)
+            self.error(errors)
         else:
            self.pack_forget()
            self.grid_forget()
@@ -161,7 +161,7 @@ class Demo1( Frame ):
         self.teacher = Teacher(self.teacher_id_input.get(),self.teacher_name_input.get(),self.teacher_age_input.get(),self.years_of_service_input.get(),address.display())
         errors = self.teacher.checkErrors()
         if len(errors) > 0:
-            print(errors)
+            self.error(errors)
         else:
             self.pack_forget()
             self.grid_forget()
