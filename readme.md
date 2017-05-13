@@ -1,5 +1,5 @@
 ### Learning Git with PyCharm and python
-This repository js for Code Club usage. It's for a small tutorial on git pychamr collaborative working and understanding OO concepts in python
+This repository js for Code Club usage. It's for a small tutorial on git pycharm collaborative working and understanding OO concepts in python
 
 OO Concepts known as object orientated concepts are the corner stone of modern programming.
 
